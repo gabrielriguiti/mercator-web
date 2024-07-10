@@ -39,7 +39,7 @@
 
 
 .background-login {
-  background-image: url('/src/img/background-login.jpg');
+  background-image: url('/public/assets/background-login.jpg');
   background-size: cover;
   background-position: center;
   width: 100%;
