@@ -8,12 +8,11 @@ import {Button} from "primereact/button";
 import User from "../model/User.model";
 import {FormApi} from "final-form";
 
-const Login: React.FC = () => {
+const LoginPage: React.FC = () => {
 
 
     const onSubmit = (data: User, form: FormApi<User, User>) => {
 
-        console.log(data)
         form.restart()
     };
 
@@ -21,20 +20,20 @@ const Login: React.FC = () => {
         let errors: any = {};
 
         if (!data.username) {
-            errors.username = 'Usuário é obrigatório.';
+            errors.username = 'Usuário é obrigatório.'
         }
 
         if (!data.password) {
-            errors.password = 'Senha é obrigatório.';
+            errors.password = 'Senha é obrigatório.'
         }
 
         return errors;
     };
 
-    const isFormFieldValid = (meta: FieldMetaState<any>) => !!(meta.touched && meta.error);
+    const isFormFieldValid = (meta: FieldMetaState<any>) => !!(meta.touched && meta.error)
 
     const getFormErrorMessage = (meta: FieldMetaState<any>) => {
-        return isFormFieldValid(meta) && <small className="p-error">{meta.error}</small>;
+        return isFormFieldValid(meta) && <small className="p-error">{meta.error}</small>
     };
 
     return (
@@ -83,4 +82,4 @@ const Login: React.FC = () => {
     )
 }
 
-export default Login
+export default LoginPage

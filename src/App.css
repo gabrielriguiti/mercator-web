@@ -49,6 +49,14 @@
   justify-content: right;
 }
 
+.background {
+  background-color: #d0e1fd;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+}
+
 .field {
   margin-top: 1.7rem;
 }
